@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, th, td {
+          border: 1px solid;
+        }
+        
+        table {
+          width: 100%;
+        }
+        </style>
+</head>
+
+<body>
+    <h2>Find Book By its Author</h2>
+    <form action="/getSingleData" method="get">
+        <input type="text" name="author">
+        <button>Submit</button>
+    </form>
+    <h2>Book Rack</h2>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Author</th>
+        </tr>
+        <% book.forEach(item => { %>
+            <tr>
+                <td><%= item.id %></td>
+                <td><%= item.title %></td>
+                <td><%= item.author %></td>
+            </tr>
+        <% }); %>
+    </table>
+    <a href="/"><button>Add New Data</button></a>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <link rel="stylesheet" type="text/css" href="css/welcome.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Your Logo</div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="welcome-text">
+            <h1>Welcome to Our Website</h1>
+            <ul>
+                    <li>
+                        ID = <%= user._id %>
+                    </li>
+                    <li>
+                        First Name = <%= user.fname %>
+                    </li>
+                    <li>
+                        Last Name = <%= user.lname %>
+                    </li>
+                    <li>
+                        Email = <%= user.email %>
+                    </li>
+                    <li>
+                        Password = <%= user.pass %>
+                    </li>
+                    <li>
+                        Created At = <%= user.createdAt %>
+                    </li>
+                    <li>
+                        Updated At = <%= user.updatedAt %>
+                    </li>
+            </ul>
+        </div>
+    </main>
+</body>
+</html>
